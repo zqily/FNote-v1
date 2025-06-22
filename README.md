@@ -40,10 +40,9 @@ There are two ways to install FNote: the easy way for most users, and the develo
 
 This is the simplest method. The application is pre-packaged with all dependencies, including VLC.
 
-1.  Go to the [**Releases**](https://github.com/your-username/your-repository/releases) page of this repository.
-2.  Download the latest `FNote-vX.X.X.zip` file.
-3.  Extract the contents of the zip file to a folder on your computer (e.g., `C:\Program Files\FNote`).
-4.  Run `FNote.exe` to start the application. You can create a shortcut to this file on your desktop for easy access.
+1.  Go to the [**Releases**](https://github.com/zqily/FNote-v1/releases/) page of this repository.
+2.  Download the `FNote.exe` file.
+3.  Run `FNote.exe` to start the application. You can create a shortcut to this file on your desktop for easy access.
 
 That's it! No further installation is required.
 
@@ -91,7 +90,7 @@ If you want to run the application directly from the Python source code, follow 
 
 ## 📦 Dependencies
 
-The application relies on the following Python libraries, which are listed in `requirements.txt`:
+The application relies on the following Python libraries:
 
 ```
 python-vlc
