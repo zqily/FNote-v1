@@ -112,13 +112,6 @@ FNote saves its configuration and playlists automatically in the same directory 
 
 This makes your entire FNote setup, including music and settings, fully portable.
 
-## 🤝 Contributing
-
-Contributions are welcome! If you have an idea for a new feature, find a bug, or want to improve the code, feel free to:
-
--   Open an issue to discuss the change.
--   Fork the repository and submit a pull request.
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
