@@ -1,55 +1,98 @@
-# FNote
+# FNote - The Smart Music Player
 
-![fnote1](https://github.com/user-attachments/assets/99bcc2e6-5040-4aca-873d-8be87e0215f0)
+![fnote1](https://github.com/user-attachments/assets/43a9d059-db2e-4c78-a80e-502918682a44)
 
-**FNote** is a lightweight, minimalist music player for Windows with a killer feature: it intelligently pauses your music when other applications start making noise. Whether you're jumping into a game, watching a video, or joining a voice call, FNote gets out of the way, ensuring you never have to manually pause your tunes again.
 
-Built with Python and Tkinter, it's designed to be a simple, "set it and forget it" companion for your daily workflow and entertainment.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+
+**FNote** is a lightweight, intuitive music player for Windows with a killer feature: it automatically pauses your music when any other application starts making sound and resumes when it's quiet again. No more manually pausing your songs when you start a game, join a video call, or watch a YouTube video!
+
+Built with Python and Tkinter, FNote is designed to be a simple, powerful, and unobtrusive companion for your local music library.
 
 ## ✨ Key Features
 
-*   **Intelligent Auto-Pause**: Automatically pauses playback when it detects audio from other applications (games, web browsers, communication apps like Discord/Teams, etc.) and resumes when the other audio stops.
-*   **Self-Contained Playlist Management**: Create multiple playlists. When you add songs, FNote copies them into a dedicated folder for that playlist, keeping your music organized and portable.
-*   **Easy Playlist Sharing**: Export any playlist (songs and all) into a single `.zip` file. Simply drag-and-drop this file onto FNote on another computer to import the entire playlist.
-*   **System Integration**:
-    *   **Run on Startup**: Configure FNote to launch automatically when you log in to Windows.
-    *   **Minimize to Tray**: Hides in the system tray instead of cluttering your taskbar.
-*   **Lightweight & Simple UI**: A clean, no-frills interface that's easy to navigate.
-*   **Standard Player Controls**: All the essentials are here: play/pause, next/previous, shuffle, loop modes (playlist, song, none), and volume control.
-*   **Drag & Drop Song Reordering**: Easily change the order of songs within a playlist.
-*   **Full Keyboard Shortcut Support**: Control every primary function without touching your mouse.
-*   **Customizable Blacklist**: Have an app you want FNote to ignore? Add it to the blacklist in the settings.
+-   **🎧 Automatic Pause & Resume:** The core feature. FNote listens for audio from other applications (games, browsers, communication apps like Discord/Teams) and intelligently pauses your music. When the other audio stops, FNote seamlessly resumes playback.
+-   **📦 Robust Playlist Management:**
+    -   Create, rename, and delete multiple playlists.
+    -   Import and Export entire playlists (including the music files) as convenient `.zip` archives.
+    -   Drag and drop songs within a playlist to reorder them.
+-   **📂 Self-Contained Music Library:** When you add music to a playlist, FNote copies the files into a dedicated `playlists` folder, keeping your library organized and portable.
+-   **▶️ Full Playback Control:**
+    -   Standard controls: Play, Pause, Next, Previous.
+    -   Shuffle and Repeat modes (Loop Playlist, Loop Song, No Loop).
+    -   Clickable progress bar to seek through tracks.
+-   **⌨️ Global Keyboard Shortcuts:** Control playback without focusing the window (Play/Pause, Next/Previous, Volume, etc.).
+-   **⚙️ System Integration:**
+    -   Option to minimize to the system tray.
+    -   Option to run automatically on Windows startup.
+-   **✍️ In-App File Management:** Rename or delete songs and their associated files directly from the playlist.
+-   **🛠️ Configurable:**
+    -   Customize the "ignore list" for the auto-pause feature.
+    -   Choose a default playlist to load on startup.
+-   **🐞 Debug Window:** An optional debug view to see what the audio detection module is doing in real-time.
 
-## ⚙️ Requirements & Installation
+## 💾 Installation
 
-FNote is designed for **Windows**.
+There are two ways to install FNote: the easy way for most users, and the developer way for those who want to run from source.
 
-### 1. Prerequisite: VLC Media Player
-FNote uses the VLC engine for robust audio playback. You **must** have VLC Media Player installed on your system.
+### For Users (Recommended)
 
-*   **[Download VLC Media Player (Official Site)](https://www.videolan.org/vlc/)**
+This is the simplest method. The application is pre-packaged with all dependencies, including VLC.
 
-Make sure you install the correct version for your system (64-bit is recommended).
+1.  Go to the [**Releases**](https://github.com/your-username/your-repository/releases) page of this repository.
+2.  Download the latest `FNote-vX.X.X.zip` file.
+3.  Extract the contents of the zip file to a folder on your computer (e.g., `C:\Program Files\FNote`).
+4.  Run `FNote.exe` to start the application. You can create a shortcut to this file on your desktop for easy access.
 
-### 2. Setting up FNote
+That's it! No further installation is required.
 
-You will need Python 3.8 or newer.
+### For Developers (Running from Source)
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+If you want to run the application directly from the Python source code, follow these steps.
 
-# 2. Create and activate a virtual environment (recommended)
-python -m venv venv
-.\venv\Scripts\activate
+#### Prerequisites
 
-# 3. Install the required Python packages
-pip install -r requirements.txt
-```
+1.  **Python 3.7+:** Make sure you have Python installed and added to your system's PATH. You can get it from [python.org](https://www.python.org/).
+2.  **VLC Media Player:** The application relies on the VLC engine for audio playback. **You must have the 64-bit version of VLC Media Player installed on your system.** You can download it from the [official VideoLAN website](https://www.videolan.org/vlc/).
 
-#### `requirements.txt`
-If a `requirements.txt` file is not included, create one with the following content:
+#### Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    cd your-repository
+    ```
+
+2.  **Create a virtual environment (recommended):**
+    ```bash
+    python -m venv venv
+    venv\Scripts\activate
+    ```
+
+3.  **Install the required Python packages:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Run the application:**
+    ```bash
+    python FNote.py
+    ```
+
+## 🚀 How to Use
+
+1.  **Create a Playlist:** On first launch, you'll be in the "default" playlist. You can create a new one using the `+` button.
+2.  **Add Music:** Click the `Add Music` button to select audio files from your computer. They will be copied into the current playlist's dedicated folder. You can also add music by importing an existing FNote playlist `.zip` file.
+3.  **Play:** Double-click a song in the list to start playing.
+4.  **Control:** Use the playback controls at the bottom of the window.
+5.  **Reorder:** Click and drag a song to a new position in the playlist.
+6.  **Configure:** Click the gear icon (`⚙️`) in the top right to access settings like "Run on Startup", "Hide to Tray", and the audio detection ignore list.
+
+## 📦 Dependencies
+
+The application relies on the following Python libraries, which are listed in `requirements.txt`:
+
 ```
 python-vlc
 tinytag
@@ -61,57 +104,22 @@ pycaw
 comtypes
 ```
 
-### 3. Running the Application
-Once the dependencies are installed, you can run FNote with:
-```bash
-python FNote.py
-```
-You can also import a playlist file directly from the command line:
-```bash
-python FNote.py "C:\path\to\my_exported_playlist.zip"
-```
+## ⚙️ Configuration
 
-## 🚀 How It Works
+FNote saves its configuration and playlists automatically in the same directory where it is run:
+-   `FConf.json`: Stores user settings like volume, current playlist, and system integration options.
+-   `FMem.json`: Stores the playlist data and paths to the music files.
+-   `playlists/`: A directory containing sub-folders for each playlist, where the actual music files are stored.
 
-### Auto-Pause Explained
-FNote actively listens to the Windows Audio Mixer. When it sees an application that isn't on its `ignore_list` (like FNote itself, or system sounds) producing audio, it triggers a pause. Once that application goes silent for a brief moment, FNote resumes your music. You can customize the list of ignored applications in `Settings -> Player`.
-
-### Playlist Management
-FNote takes a self-contained approach.
-*   When you create a new playlist (e.g., "Workout"), a corresponding folder is created inside the `playlists` directory.
-*   When you add songs to the "Workout" playlist, the audio files are **copied** into the `playlists/Workout` folder.
-*   This means your original files are untouched, and the playlist is entirely portable. Deleting a playlist from FNote also deletes its associated folder and all the songs within it.
-
-## ⌨️ Keyboard Shortcuts
-
-| Key(s)           | Action                  |
-| ---------------- | ----------------------- |
-| `Space`          | Toggle Play / Pause     |
-| `Down` or `s`    | Next Song               |
-| `Up` or `w`      | Previous Song           |
-| `Right` or `d`   | Volume Up (+5)          |
-| `Left` or `a`    | Volume Down (-5)        |
-| `Delete`         | Delete Selected Song(s) |
-| `Ctrl` + `s`     | Toggle Shuffle          |
-| `F2`             | Rename Selected Song    |
-
-
-## 🏗️ Building from Source
-
-You can package FNote into a single `.exe` file using PyInstaller.
-
-1.  Make sure PyInstaller is installed: `pip install pyinstaller`
-2.  Run the following command from the project's root directory:
-
-```bash
-pyinstaller --onefile --windowed --add-data "assets;assets" --icon="assets/icon.ico" FNote.py
-```
-This will create a `dist` folder containing `FNote.exe`, which can be run on any Windows machine (that has VLC installed).
+This makes your entire FNote setup, including music and settings, fully portable.
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you have ideas for new features, bug fixes, or improvements, feel free to fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! If you have an idea for a new feature, find a bug, or want to improve the code, feel free to:
 
-## 📄 License
+-   Open an issue to discuss the change.
+-   Fork the repository and submit a pull request.
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
