@@ -1,7 +1,6 @@
 # FNote
 
- 
-*<-- Replace this with a real screenshot or GIF of your application!*
+![fnote1](https://github.com/user-attachments/assets/99bcc2e6-5040-4aca-873d-8be87e0215f0)
 
 **FNote** is a lightweight, minimalist music player for Windows with a killer feature: it intelligently pauses your music when other applications start making noise. Whether you're jumping into a game, watching a video, or joining a voice call, FNote gets out of the way, ensuring you never have to manually pause your tunes again.
 
